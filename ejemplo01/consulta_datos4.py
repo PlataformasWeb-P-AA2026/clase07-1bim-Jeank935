@@ -33,8 +33,8 @@ print("Consulta 1 ")
 Consulta 1 
 Club: nombre=Barcelona deporte=Fútbol fundación=1920
 """
-# for e in clubs: 
-#    print(e) 
+for e in clubs: 
+   print(e) 
 
 # Obtener un listado de todos los registros 
 # de la tabla Club y Jugador, que tengan al menos 
@@ -61,6 +61,7 @@ Jugador: Damian Diaz - dorsal:10 - posición: mediocampo
 Club: nombre=Barcelona deporte=Fútbol fundación=1920
 Jugador: Dario Aymar - dorsal:2 - posición: defensa
 """
+# es la tupla del query resultante de registros donde [0] es el club y la posicion [1] es el jugador
 for registro in registros: 
 #     # el registro continen 
 #     # dos valores en un tupla

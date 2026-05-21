@@ -26,7 +26,8 @@ clubs = session.query(Club).all()
 # repetitivo for en python
 print("Presentación de Clubs y sus jugadores")
 for s in clubs:
-    print("%s" % (s))
+    # print("%s" % (s))
+    print(f"{s}" )
     # desde cada objeto de la lista
     # de tipo Club
     # se puede acceder 

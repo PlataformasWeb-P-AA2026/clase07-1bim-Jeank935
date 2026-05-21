@@ -29,7 +29,7 @@ class Club(Base):
     # por la llave foránea
     jugadores = relationship("Jugador", back_populates="club")
 
-    
+    # es un atributo virtual que solo existe a nivel de orm
     def __repr__(self):
         return "Club(%d): nombre=%s deporte=%s fundación=%d" % (
                           self.id, 
