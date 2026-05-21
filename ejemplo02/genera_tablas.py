@@ -23,9 +23,10 @@ class Matricula(Base):
     estudiante = relationship("Estudiante", back_populates="modulos")
 
     def __repr__(self):
-        return "Matricula: estudiante=%s\n modulo=%s\n"% (
+        return "Matricula: estudiante=%s\n modulo=%s\n periodo=%s"%  (
                           self.estudiante,
-                          self.modulo)
+                          self.modulo,
+                          self.periodo)
 
 class Estudiante(Base):
     __tablename__ = 'estudiante'
@@ -33,6 +34,7 @@ class Estudiante(Base):
     nombre = Column(String(50))
     apellido = Column(String(50))
     modulos = relationship("Matricula", back_populates="estudiante")
+    # modulos = relationship("Modulo", back_populates="estudiantes")
 
     def __repr__(self):
         return "Estudiante: nombre=%s - apellido=%s"% (
